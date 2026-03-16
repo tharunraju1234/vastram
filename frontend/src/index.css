@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Mulish:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Mulish', sans-serif;
+    --color-accent: #C4A484;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Selection */
+::selection {
+    background: #000;
+    color: #fff;
+}
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 0 0% 0%;
+        --card: 0 0% 100%;
+        --card-foreground: 0 0% 0%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 0 0% 0%;
+        --primary: 0 0% 0%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 0 0% 96%;
+        --secondary-foreground: 0 0% 0%;
+        --muted: 0 0% 96%;
+        --muted-foreground: 0 0% 45%;
+        --accent: 30 32% 64%;
+        --accent-foreground: 0 0% 0%;
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 0 0% 100%;
+        --border: 0 0% 90%;
+        --input: 0 0% 90%;
+        --ring: 0 0% 0%;
+        --radius: 0.25rem;
+    }
+    .dark {
+        --background: 0 0% 5%;
+        --foreground: 0 0% 98%;
+        --card: 0 0% 8%;
+        --card-foreground: 0 0% 98%;
+        --popover: 0 0% 8%;
+        --popover-foreground: 0 0% 98%;
+        --primary: 0 0% 98%;
+        --primary-foreground: 0 0% 5%;
+        --secondary: 0 0% 15%;
+        --secondary-foreground: 0 0% 98%;
+        --muted: 0 0% 15%;
+        --muted-foreground: 0 0% 64%;
+        --accent: 30 32% 64%;
+        --accent-foreground: 0 0% 98%;
+        --destructive: 0 62% 30%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 0 0% 15%;
+        --input: 0 0% 15%;
+        --ring: 0 0% 83%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+@layer components {
+    .btn-primary {
+        @apply bg-black text-white px-6 py-3 text-sm uppercase tracking-widest font-medium transition-all duration-300 hover:bg-neutral-800;
+    }
+    
+    .btn-secondary {
+        @apply bg-transparent border border-black text-black px-6 py-3 text-sm uppercase tracking-widest font-medium transition-all duration-300 hover:bg-black hover:text-white;
+    }
+    
+    .btn-ghost {
+        @apply text-black hover:text-neutral-600 underline-offset-4 hover:underline text-sm uppercase tracking-wide;
+    }
+    
+    .container-custom {
+        @apply max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12;
+    }
+    
+    .section-padding {
+        @apply py-16 md:py-24 lg:py-32;
+    }
+    
+    .heading-xl {
+        @apply text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight;
+    }
+    
+    .heading-lg {
+        @apply text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight;
+    }
+    
+    .heading-md {
+        @apply text-2xl sm:text-3xl font-medium tracking-tight;
+    }
+    
+    .text-muted {
+        @apply text-neutral-500;
+    }
+}
+
+@layer base {
+    [data-debug-wrapper="true"] {
+        display: contents !important;
+    }
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Image hover zoom */
+.img-zoom {
+    overflow: hidden;
+}
+
+.img-zoom img {
+    transition: transform 0.5s ease;
+}
+
+.img-zoom:hover img {
+    transform: scale(1.05);
+}

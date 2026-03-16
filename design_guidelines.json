@@ -1,0 +1,135 @@
+{
+  "identity": {
+    "name": "VASTRAM",
+    "aesthetic": "Minimal Luxury Fashion",
+    "tone": "Sophisticated, Editorial, Confident",
+    "target_audience": "Fashion-conscious, 18-45",
+    "core_values": ["Premium Quality", "Timeless Style", "Effortless Shopping"]
+  },
+  "theme": {
+    "mode": "light",
+    "strategy": "The Art Gallery - The UI is the frame, the product is the art. Massive whitespace, large typography."
+  },
+  "typography": {
+    "headings": {
+      "font_family": "Playfair Display, serif",
+      "weights": ["400", "600", "700"],
+      "usage": "All section titles, hero text, product names on detail page. Use 'tracking-tight' for large sizes."
+    },
+    "body": {
+      "font_family": "Mulish, sans-serif",
+      "weights": ["300", "400", "500", "600"],
+      "usage": "Descriptions, prices, buttons, navigation. Use 'tracking-wide' for uppercase labels."
+    }
+  },
+  "colors": {
+    "palette": {
+      "primary": "#000000",
+      "secondary": "#FFFFFF",
+      "accent": "#C4A484",
+      "neutral_light": "#F5F5F5",
+      "neutral_dark": "#1A1A1A",
+      "border": "#E5E5E5",
+      "error": "#DC2626",
+      "success": "#16A34A"
+    },
+    "usage_rules": {
+      "background": "bg-white",
+      "text_primary": "text-black",
+      "text_secondary": "text-neutral-500",
+      "buttons": "bg-black text-white hover:bg-white hover:text-black hover:border-black border border-transparent transition-all duration-300",
+      "borders": "border-neutral-200"
+    }
+  },
+  "layout": {
+    "grid_system": {
+      "container": "max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12",
+      "spacing": {
+        "section_gap": "py-20 md:py-32",
+        "element_gap": "gap-4 md:gap-8"
+      }
+    },
+    "strategies": {
+      "home_hero": "Full-screen immersive image/video. Centered typography. Minimal overlay.",
+      "bento_grid": "Use for categories. Asymmetric layout (1 large, 2 small, 1 tall).",
+      "product_list": "Clean grid. 1 col mobile, 2 col tablet, 4 col desktop. Minimal product cards.",
+      "product_detail": "Split screen. Left: Sticky image gallery (vertical scroll). Right: Sticky product details."
+    }
+  },
+  "components": {
+    "buttons": {
+      "style": "Sharp edges (rounded-none) or minimal radius (rounded-sm). Uppercase text. Wide tracking.",
+      "variants": {
+        "primary": "bg-black text-white hover:bg-neutral-800",
+        "secondary": "bg-transparent border border-black text-black hover:bg-black hover:text-white",
+        "ghost": "text-black hover:text-neutral-600 underline-offset-4 hover:underline"
+      }
+    },
+    "cards": {
+      "product": "No border, no shadow by default. Image aspect ratio 3:4. Hover: Image zoom or secondary image reveal. Text aligned left below image.",
+      "category": "Text overlay on image. Dark gradient at bottom for readability."
+    },
+    "inputs": {
+      "style": "Minimal. Border-b only (underline style) or clean box with light border. Focus: Black border."
+    }
+  },
+  "motion": {
+    "library": "framer-motion",
+    "guidelines": {
+      "page_transition": "Fade in + slight slide up (y: 20 -> 0).",
+      "scroll_reveal": "Elements fade in as they enter viewport.",
+      "hover_effects": "Smooth scale (1.05) for images. Underline expansion for links.",
+      "stagger": "Stagger children animations by 0.1s."
+    }
+  },
+  "assets": {
+    "images": {
+      "hero": {
+        "url": "https://images.unsplash.com/photo-1652281846260-14c1bdd5e9a0?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Fashion Editorial Street Style",
+        "category": "hero"
+      },
+      "men": {
+        "url": "https://images.unsplash.com/photo-1764698072685-f01c10bd2dca?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Men Minimalist Studio",
+        "category": "category_men"
+      },
+      "women": {
+        "url": "https://images.unsplash.com/photo-1768460608433-d3af5148832c?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Women Elegant Studio",
+        "category": "category_women"
+      },
+      "kids": {
+        "url": "https://images.unsplash.com/photo-1759313560255-0458c8f4e615?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Kids Playful Studio",
+        "category": "category_kids"
+      },
+      "accessories": {
+        "url": "https://images.unsplash.com/photo-1665832102613-5b94286ec041?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Luxury Handbag",
+        "category": "category_accessories"
+      },
+      "abstract_bg": {
+        "url": "https://images.unsplash.com/photo-1652120268427-9ba66e870467?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Abstract Geometric Texture",
+        "category": "background_texture"
+      }
+    },
+    "icons": "Lucide React (Stroke width: 1.5px for elegance)"
+  },
+  "accessibility": {
+    "contrast": "Ensure text is #000000 on #FFFFFF or #FFFFFF on #000000.",
+    "focus_states": "Visible focus rings (ring-2 ring-black ring-offset-2).",
+    "aria_labels": "Required for all icon-only buttons."
+  },
+  "universal_guidelines": [
+    "Do not use gradients for backgrounds. Stick to solid white or very subtle off-white.",
+    "Avoid 'tech' blues or purples. Use monochrome + beige/earth tones.",
+    "Images are the heroes. Give them maximum space.",
+    "Typography must be hierarchical. Huge headings, readable body.",
+    "Use 'sonner' for toasts.",
+    "Use 'lucide-react' for icons.",
+    "Ensure all interactive elements have 'data-testid'."
+  ],
+  "instructions_to_main_agent": "You are building a premium fashion e-commerce site. Think 'Vogue' meets 'Shopify'. Prioritize visual impact and smoothness. Use the provided image URLs for the respective sections. Implement the 'Bento' grid for categories on the homepage. Use the 'Playfair Display' font for all headings to give it that luxury feel."
+}
