@@ -12,7 +12,7 @@ import { Skeleton } from '../components/ui/skeleton';
 import { toast } from 'sonner';
 import { cn } from '../lib/utils';
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const API = process.env.REACT_APP_API_URL;
 
 const sidebarItems = [
   { icon: User, label: 'Profile', path: '/account' },

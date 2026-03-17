@@ -7,7 +7,7 @@ import { useAuth } from '../context/AuthContext';
 import { Skeleton } from '../components/ui/skeleton';
 import { toast } from 'sonner';
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const API = process.env.REACT_APP_API_URL;
 
 export const OrderSuccessPage = () => {
   const { orderId } = useParams();

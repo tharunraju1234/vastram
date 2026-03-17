@@ -11,7 +11,7 @@ import { toast } from 'sonner';
 import axios from 'axios';
 import { cn } from '../lib/utils';
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const API = process.env.REACT_APP_API_URL;
 
 export const CheckoutPage = () => {
   const { cart, fetchCart, clearCart } = useCart();

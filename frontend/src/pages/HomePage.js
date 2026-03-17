@@ -7,7 +7,7 @@ import { ProductCard } from '../components/ProductCard';
 import { QuickViewModal } from '../components/QuickViewModal';
 import { Skeleton } from '../components/ui/skeleton';
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const API = process.env.REACT_APP_API_URL;
 
 // Hero images from design guidelines
 const heroImage = "https://images.unsplash.com/photo-1652281846260-14c1bdd5e9a0?crop=entropy&cs=srgb&fm=jpg&q=85&w=1920";

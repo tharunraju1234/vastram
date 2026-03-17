@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "mongodb": "^7.1.0",
+    "mongoose": "^9.3.0",
     "python-shell": "^5.0.0"
   }
 }

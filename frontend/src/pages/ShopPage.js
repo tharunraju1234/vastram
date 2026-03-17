@@ -12,7 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 import { Sheet, SheetContent, SheetTrigger } from '../components/ui/sheet';
 import { cn } from '../lib/utils';
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const API = process.env.REACT_APP_API_URL;
 
 const categories = [
   { name: 'Men', slug: 'men', subcategories: ['Shirts', 'T-Shirts', 'Jeans', 'Jackets', 'Ethnic Wear'] },

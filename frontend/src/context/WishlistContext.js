@@ -4,7 +4,7 @@ import { useAuth } from './AuthContext';
 
 const WishlistContext = createContext(null);
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const API = process.env.REACT_APP_API_URL;
 
 export const WishlistProvider = ({ children }) => {
   const { token, user } = useAuth();
